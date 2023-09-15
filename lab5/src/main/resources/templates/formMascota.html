@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Form de nueva mascota</title>
+    </head>
+    <body>
+
+        <main>
+            <div class="container px-4 py-5">
+                <h1 class="pb-2 mb-4 border-bottom">Nueva Mascota</h1>
+                <form method="post" th:action="@{'/guardarMascota'}" class="col-4">
+                    <div class="mb-3">
+                        <label for="companyname" class="form-label">Nombre</label>
+                        <input name="nombremascota" type="text" class="form-control" id="companyname">
+                    </div>
+                    <div class="mb-3">
+                        <label for="genero" class="form-label">Genero</label>
+                        <input name="genero" type="text" class="form-control" id="genero">
+                    </div>
+                    <div class="mb-3">
+                        <label for="edad" class="form-label">Edad</label>
+                        <input name="edad" type="text" class="form-control" id="edad">
+                    </div>
+                    <div class="mb-3">
+                        <label for="fecha" class="form-label">Fecha de nacimiento</label>
+                        <input name="fechanacimiento" type="text" class="form-control" id="fecha">
+                    </div>
+                    <div class="mb-3">
+                        <label for="vacuna" class="form-label">Vacunado?</label>
+                        <input name="vacunado" type="text" class="form-control" id="vacuna">
+                    </div>
+                    <div class="mb-3">
+                        <label for="parasito" class="form-label">Desparasitado?</label>
+                        <input name="desparasitado" type="text" class="form-control" id="parasito">
+                    </div>
+                    <a th:href="@{'/listaMascotas'}" class="btn btn-danger">Cancelar</a>
+                    <button type="submit" class="btn btn-primary">Registrar</button>
+                </form>
+            </div>
+        </main>
+
+    </body>
+</html>
